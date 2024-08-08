@@ -81,3 +81,5 @@ SELECT
      JOIN 
 	 aluno a 
      ON d.fk_aluno_id = a.id;
+     
+SELECT pg_encoding_to_char(encoding) FROM pg_database WHERE datname = 'projetodiario1';

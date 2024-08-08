@@ -51,8 +51,7 @@ show tables;
  
 ALTER TABLE diariobordo ADD CONSTRAINT FK_diariobordo_2
     FOREIGN KEY (fk_aluno_id)
-    REFERENCES aluno (id)
-    ON DELETE CASCADE;
+    REFERENCES aluno (id);
     
 SELECT * FROM diariobordo;
 SELECT * FROM aluno;
@@ -71,6 +70,17 @@ INSERT diariobordo(texto,
                    fk_aluno_id)VALUES('estou aprendendo insert de novo',
                                       '2024-08-01 09:33:00',
                                        24);
+                                       
+INSERT INTO diariobordo (texto, datahora, fk_aluno_id) VALUES
+('O professor explicou bem o conceito de álgebra linear', '2024-08-01 10:45:00', 14),
+('Fizemos uma atividade em grupo sobre sustentabilidade', '2024-08-02 14:30:00', 15),
+('A revisão para a prova de história foi muito produtiva', '2024-08-03 11:00:00', 13),
+('Tivemos uma aula prática de laboratório de química', '2024-08-04 13:15:00', 16),
+('Discutimos a importância da literatura no desenvolvimento crítico', '2024-08-05 09:00:00', 14),
+('A aula de educação física foi cansativa, mas divertida', '2024-08-06 16:20:00', 17),
+('Aprendemos sobre técnicas de programação em Python', '2024-08-07 12:00:00', 15);
+
+
 SELECT *  FROM diariobordo;
 SELECT * FROM 
      diariobordo 
@@ -142,7 +152,7 @@ INSERT avaliacao(id,nota1,nota2,nota3,nota4,fk_aluno_id)VALUES(3,5,3,7,4,4);
 INSERT avaliacao(id,nota1,nota2,nota3,nota4,fk_aluno_id)VALUES(4,1,2,6,1,3);
 INSERT avaliacao(id,nota1,nota2,nota3,nota4,fk_aluno_id)VALUES(5,5,5,5,5,2);
 
-SELECT *  FROM avaliacao;
+SELECT *  FROM aluno;
 
 select  v.nota1, v.nota2, v.nota3, v.nota4, a.ra from avaliacao v join aluno a on v.fk_aluno_id = a.id;
 
@@ -152,6 +162,7 @@ ADD COLUMN Nome VARCHAR(80),
 ADD COLUMN tempoestudo INT not null,
 ADD COLUMN rendafamiliar DECIMAL(10, 2);
 describe aluno;
+
 
 
 INSERT INTO aluno (ra, nome, tempoestudo, rendafamiliar) VALUES ('12345695', 'Ana Silva', 10, 2500.00);
@@ -208,3 +219,5 @@ INSERT INTO aluno (ra, nome, tempoestudo, rendafamiliar) VALUES ('12345745', 'Yu
 INSERT INTO aluno (ra, nome, tempoestudo, rendafamiliar) VALUES ('12345746', 'Zilda Santos', 16, 3100.00);
 INSERT INTO aluno (ra, nome, tempoestudo, rendafamiliar) VALUES ('12345747', 'Alan Costa', 11, 2600.00);
 INSERT INTO aluno (ra, nome, tempoestudo, rendafamiliar) VALUES ('12345748', 'Bárbara Lima', 13, 2800.00);
+
+

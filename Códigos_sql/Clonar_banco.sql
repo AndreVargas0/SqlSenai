@@ -3,7 +3,7 @@ create database projetodiario1;
 create table aluno(
 	id int primary key auto_increment,
     ra char(8) not null unique,
-	Nome VARCHAR(80),
+	nome VARCHAR(80),
     tempoestudo INT not null,
     rendafamiliar DECIMAL(10, 2)
 );
@@ -93,6 +93,7 @@ INSERT INTO aluno (ra, nome, tempoestudo, rendafamiliar) VALUES ('12345743', 'We
 INSERT INTO aluno (ra, nome, tempoestudo, rendafamiliar) VALUES ('12345744', 'Xuxa Almeida', 12, 2700.00);
 INSERT INTO aluno (ra, nome, tempoestudo, rendafamiliar) VALUES ('12345745', 'Yuri Rodrigues', 14, 2900.00);
 INSERT INTO aluno (ra, nome, tempoestudo, rendafamiliar) VALUES ('12345746', 'Zilda Santos', 16, 3100.00);
+INSERT INTO aluno (ra, nome, tempoestudo, rendafamiliar) VALUES ('12345666', 'Luiz Lima', 110, 1000.00);
 INSERT INTO aluno (ra, nome, tempoestudo, rendafamiliar) VALUES ('12345747', 'Alan Costa', 11, 2600.00);
 INSERT INTO aluno (ra, nome, tempoestudo, rendafamiliar) VALUES ('12345748', 'Bárbara Lima', 13, 2800.00);
 
